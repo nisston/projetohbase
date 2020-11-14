@@ -1,0 +1,163 @@
+Apresentação
+
+Porque usar?
+
+Arquitetura
+
+Estrutura de uma tabela
+
+Processo de leitura e escrita
+
+Como acessar os dados
+
+Tipos de acesso
+
+Desing do HBase
+	Focar nos dados
+	Para agrupar os dados
+	Como eles podem ser acessados
+	Trabalha com chave:valor
+	Sempre pensar nos dados desnormalizados
+	Poucas tabelas com tamanhos grandes (colunas e linhas)
+
+
+Chave:
+		Row
+			família de colunas
+				Colunas
+					Timestamp (utilizado para guardar as versões)
+					
+
+Modelo de dados: (tabela, rowkey,família,coluna,timestamp) -> value
+
+
+O HBase foi construido em cima do HDFS Hadoop
+
+HDFS - Gerenciados do Sistema de Arquivos
+Zookeeper - Gerenciador de Cluster
+
+
+Arquitetura
+
+
+=======================================
+
+Questões:
+
+Qual a diferença da estrutura de uma tabela do Cassandra para uma tabela em um banco de dados relacional?
+Como são armazenados os dados fisicamente no ???
+
+
+Link para o Guia Rápido
+
+https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
+
+
+Acessando a cloud do google
+
+https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
+
+
+Criando Instância
+
+https://console.cloud.google.com/bigtable/create-instance?hl=pt-br&_ga=2.92793501.128447963.1605119993-65563872.1596463130&_gac=1.93724143.1604243072.Cj0KCQjwufn8BRCwARIsAKzP695NOamoITnW31aF7j-EUPAIQcKcoZE3pjvjpfnqa3DIPVSovvPorSMaAgBZEALw_wcB&project=upheld-terminus-295318&folder=&organizationId=
+
+
+https://console.cloud.google.com/bigtable/instances?hl=pt-br&project=upheld-terminus-295318
+
+
+
+
+Abrir o console
+
+https://console.cloud.google.com/?cloudshell=true&hl=pt-br
+
+
+
+Comandos de configuração
+
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk-headless
+export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')
+
+Clonando o repositório
+
+git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git
+cd cloud-bigtable-examples/quickstart
+
+
+
+Comandos do HBase
+==================
+
+
+Iniciando o HBase
+
+./quickstart.sh
+
+
+Ler e gravar dados:
+
+Criando uma tabela
+
+create 'my-table', 'cf1'
+
+Lista as tabelas
+
+list
+
+Colocando valores
+
+put 'my-table', 'r1', 'cf1:c1', 'test-value'
+	
+Verificando a tabela
+
+scan 'my-table'
+	
+Excluindo a tabela
+
+disable 'cliente'
+drop 'cliente'
+	
+=====================================================================
+
+Comandos de configuração
+------------------------
+
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk-headless
+export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')
+
+Clonando o repositório
+------------------------
+git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git
+cd cloud-bigtable-examples/quickstart
+
+
+Comandos de criação das tabelas, colunas e atribuindo valores:
+---------------------------------------------------------------	
+create 'cliente', 'cf1'
+
+list
+
+put 'cliente', 'r1', 'cf1:nome', 'maria'
+	
+scan 'cliente'
+
+================================================================
+
+
+
+create 'cliente', 'cf1'
+
+put 'cliente', 'r1', 'cf1:c1', 'maria'
+put 'cliente', 'r2', 'cf1:c2', '222'
+put 'cliente', 'r3', 'cf1:c3', 'http://www.empresa.com.br'
+put 'cliente', 'r4', 'cf1:c4', '1000'
+
+create 'fornecedor', 'cf2'
+
+put 'fornecedor', 'r1', 'cf1:c1', 'empresa A'
+put 'fornecedor', 'r2', 'cf1:c2', '8888'
+put 'fornecedor', 'r3', 'cf2:c3', 'http://www.fornecedor.com.br'
+put 'fornecedor', 'r4', 'cf2:c4', '10'
