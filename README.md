@@ -5,14 +5,20 @@ Prof. Dr. Carlos Eduardo Santos Pires
 
 ## Apache HBase via Google Cloud
 
-#### Acessando o ambiente da Google Cloud
------
+#### Guia de início rápido usando o shell do HBase
 https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
 
-#### Link para acesso ao console do cloud do google
+#### Acessando o ambiente da Google Cloud
+-----
+https://cloud.google.com/
+
+#### Criando uma instância do Bittable
+-----
+https://console.cloud.google.com/bigtable/create-instance?hl=pt-br
+
+#### Link para acesso ao console do Google Cloud
 -----
 https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
-
 
 
 ##Comandos de configuração
