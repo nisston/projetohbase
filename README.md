@@ -1,10 +1,10 @@
-# Intalação, Configuração e Execução do Apache HBase
+# Instalação e comandos básicos do Apache HBase
 
 Disciplina: Banco de Dados
 
 Prof. Dr. Carlos Eduardo Santos Pires
 
-## Apache HBase via Google Cloud
+## Instalação do Apache HBase via Google Cloud
 
 #### Guia de início rápido usando o shell do HBase
 
@@ -25,10 +25,10 @@ https://console.cloud.google.com/bigtable/create-instance?hl=pt-br
 https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
 
 
-## Comandos de configuração
+## Comandos básicos do Apache HBase
 -----
 
-#### Instalação do JDK para rodar o HBase
+#### Instalação e configuração do JDK para rodar o Apache HBase
 
 ``#Comandos de configuração do JDK para rodar o HBase``
 
