@@ -26,13 +26,20 @@ https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
 
 #### Instalação do JDK para rodar o HBase
 ``#Comandos de configuração do JDK para rodar o HBase``
+
 ``sudo apt-get update``
+
 ``sudo apt-get install openjdk-8-jdk-headless``
+
 ``export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')``
 
+
 ``#Comandos para clonar um repositório exemplo de bigtable``
+
 ``git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git``
+
 ``cd cloud-bigtable-examples/quickstart``
+
 
 #### Iniciando o HBase
 ``./quickstart.sh``
