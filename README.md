@@ -3,7 +3,6 @@
 Projeto desenvolvido na disciplina de Banco de Dados.
 
 Prof. Dr. Carlos Eduardo Santos Pires
------
 
 ## Apache HBase via Google Cloud
 
