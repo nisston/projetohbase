@@ -1,6 +1,6 @@
 # Intalação, Configuração e Execução do Apache HBase
 
-Projeto desenvolvido na disciplina de Banco de Dados.
+Disciplina: Banco de Dados
 
 Prof. Dr. Carlos Eduardo Santos Pires
 
