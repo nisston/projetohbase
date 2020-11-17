@@ -14,6 +14,8 @@ https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
 -----
 https://cloud.google.com/
 
+Você pode logar com o domínio @copin.ufcg.edu.br para ter acesso ao serviço.
+
 #### Criando uma instância do Bigtable
 -----
 https://console.cloud.google.com/bigtable/create-instance?hl=pt-br
@@ -23,7 +25,7 @@ https://console.cloud.google.com/bigtable/create-instance?hl=pt-br
 https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
 
 
-##Comandos de configuração
+## Comandos de configuração
 -----
 
 #### Instalação do JDK para rodar o HBase
