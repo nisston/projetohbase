@@ -10,25 +10,26 @@ Prof. Dr. Carlos Eduardo Santos Pires
 
 https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
 
-#### Acessando o ambiente da Google Cloud
+#### Passo 1 - Acessando o ambiente da Google Cloud
 -----
 https://cloud.google.com/
 
 Você pode logar com o domínio @copin.ufcg.edu.br para ter acesso ao serviço.
 
-#### Criando uma instância do Bigtable
+#### Passo 2 - Criando uma instância do Bigtable
 -----
 https://console.cloud.google.com/bigtable/create-instance?hl=pt-br
 
-#### Link para acesso ao console do Google Cloud
+#### Passo 3 - Link para acesso ao console do Google Cloud
 -----
 https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
 
+Não esquecer de deletar a instância após a utilização.
 
-## Comandos básicos do Apache HBase
+#### Comandos básicos do Apache HBase
 -----
 
-#### Instalação e configuração do JDK para rodar o Apache HBase
+#### Passo 4 - Instalação e configuração do JDK para rodar o Apache HBase
 
 ``#Comandos de configuração do JDK para rodar o HBase``
 
@@ -46,7 +47,7 @@ https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
 ``cd cloud-bigtable-examples/quickstart``
 
 
-#### Iniciando o HBase
+#### Passo 5 - Iniciando o HBase
 
 ``./quickstart.sh``
 
