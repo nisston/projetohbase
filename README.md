@@ -14,7 +14,7 @@ https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
 -----
 https://cloud.google.com/
 
-#### Criando uma instância do Bittable
+#### Criando uma instância do Bigtable
 -----
 https://console.cloud.google.com/bigtable/create-instance?hl=pt-br
 
