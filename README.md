@@ -106,3 +106,6 @@ https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
 
 ## Link para mais comandos do HBase
 https://learnhbase.net/2013/03/02/hbase-shell-commands/
+
+## Link para vídeo no youtube
+
