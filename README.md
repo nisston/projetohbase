@@ -109,4 +109,4 @@ Não esquecer de deletar a instância após a utilização.
 https://learnhbase.net/2013/03/02/hbase-shell-commands/
 
 ## Link para vídeo no youtube
-
+https://drive.google.com/file/d/1Xr66MWEaKoMgsgnnN8DS-rECzh9uwtB4/view?usp=sharing
