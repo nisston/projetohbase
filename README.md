@@ -32,61 +32,64 @@ Navegue até a pasta desejada e realize o download através do comando
 
 -----
 
-## Executando comandos no Apache HBase pelo Shell
+##Comandos de configuração
+-----
 
-#### Acessando o ambiente da Google Cloud
+#### Instalação do JDK para rodar o HBase
 
-Comandos de configuração
-========================
-
-#Comandos de configuração do JDK para rodar o HBase
+``#Comandos de configuração do JDK para rodar o HBase
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk-headless
-export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')
+export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')``
 
-#Clonando um repositório exemplo de bigtable
+``#Clonando um repositório exemplo de bigtable
 git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git
-cd cloud-bigtable-examples/quickstart
+cd cloud-bigtable-examples/quickstart``
 
-#Iniciando o HBase
-./quickstart.sh
 
-#Criando tabela
-create 'cliente', 'cf1'
+``#Iniciando o HBase
+./quickstart.sh``
 
-#Listando as tabelas existentes
-list
 
-#Criando registros na tabela
+``#Criando tabela
+create 'cliente', 'cf1'``
+
+``#Listando as tabelas existentes
+list``
+
+``#Criando registros na tabela
 put 'cliente', 'r1', 'cf1:c1', 'maria'
 put 'cliente', 'r1', 'cf1:c2', '222'
 put 'cliente', 'r1', 'cf1:c3', 'http://www.empresa.com.br'
-put 'cliente', 'r1', 'cf1:c4', '1000'
+put 'cliente', 'r1', 'cf1:c4', '1000'``
 
-#Criando um novo registro da mesma coluna 
+``#Criando um novo registro da mesma coluna 
 put 'cliente', 'r2', 'cf1:c1', 'pedro'
 put 'cliente', 'r2', 'cf1:c2', '44444'
 put 'cliente', 'r2', 'cf1:c3', 'http://www.empresaA.com.br'
-put 'cliente', 'r2', 'cf1:c4', '200'
+put 'cliente', 'r2', 'cf1:c4', '200'``
 
 #Recuperando dados das tabelas
-scan 'cliente'
+``scan 'cliente'``
 
 #Recuperando dados de mais de uma coluna
-scan 'cliente', {COLUMNS => ['cf1:c1','cf1:c4']}
+``scan 'cliente', {COLUMNS => ['cf1:c1','cf1:c4']}``
 
 #Outra maneira de recupara dados
-get 'cliente', 'r1'
+``get 'cliente', 'r1'``
 
-get 'cliente', {COLUMNS => ['cf1:c1','cf1:c4']}
+``get 'cliente', {COLUMNS => ['cf1:c1','cf1:c4']}``
 
-#Deletando um registro
-delete 'cliente', 'r1', 'cf1:c4'
+
+#### Deletando registro
+
+``#Deletando um registro
+delete 'cliente', 'r1', 'cf1:c4'``
 
 
 #Apagando a tabela cliente
-disable 'cliente'
-drop 'cliente'
+``disable 'cliente'
+drop 'cliente'``
 
 
 create 'fornecedor', 'cf2'
