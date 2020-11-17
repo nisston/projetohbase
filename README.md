@@ -7,29 +7,11 @@ Projeto desenvolvido na disciplina de Banco de Dados.
 
 #### Acessando o ambiente da Google Cloud
 -----
-
-https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
-
-#### Link para acesso ao cloud do google
------
-
-https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
+``https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br``
 
 #### Link para acesso ao console do cloud do google
 -----
-
-https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
-
-#### Link para comandos básicos no HBase
------
-
-https://learnhbase.net/2013/03/02/hbase-shell-commands/
-
-
-Navegue até a pasta desejada e realize o download através do comando
-
-``wget https://github.com/bitnami/bitnami-docker-cassandra/blob/master/docker-compose-cluster.yml -O docker-compose.yml``
-
+``https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br``
 -----
 
 ##Comandos de configuração
@@ -47,55 +29,45 @@ git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git
 cd cloud-bigtable-examples/quickstart``
 
 
-``#Iniciando o HBase
-./quickstart.sh``
+#### Iniciando o HBase
+``./quickstart.sh``
 
+#### Criando uma tabela no HBase
+``create 'cliente', 'cf1'``
 
-``#Criando tabela
-create 'cliente', 'cf1'``
+#### Listando as tabelas existentes no HBase
+``list``
 
-``#Listando as tabelas existentes
-list``
-
-``#Criando registros na tabela
-put 'cliente', 'r1', 'cf1:c1', 'maria'
+#### Criando registros na tabela cliente com quatro colunas
+``put 'cliente', 'r1', 'cf1:c1', 'maria'
 put 'cliente', 'r1', 'cf1:c2', '222'
 put 'cliente', 'r1', 'cf1:c3', 'http://www.empresa.com.br'
 put 'cliente', 'r1', 'cf1:c4', '1000'``
 
-``#Criando um novo registro da mesma coluna 
-put 'cliente', 'r2', 'cf1:c1', 'pedro'
+#### Criando um novo registro na tabela cliente com quatro coluna 
+``put 'cliente', 'r2', 'cf1:c1', 'pedro'
 put 'cliente', 'r2', 'cf1:c2', '44444'
 put 'cliente', 'r2', 'cf1:c3', 'http://www.empresaA.com.br'
 put 'cliente', 'r2', 'cf1:c4', '200'``
 
-#Recuperando dados das tabelas
+#### Visualizando dados da tabela cliente
 ``scan 'cliente'``
 
-#Recuperando dados de mais de uma coluna
+#### Visualizando dados da tabela cliente com especificação de colunas
 ``scan 'cliente', {COLUMNS => ['cf1:c1','cf1:c4']}``
 
-#Outra maneira de recupara dados
+#### Outra maneira de visualizar dados da tabela
 ``get 'cliente', 'r1'``
 
+#### Outra maneira de visualizar dados da tabela com a especificação de colunas
 ``get 'cliente', {COLUMNS => ['cf1:c1','cf1:c4']}``
 
+#### Apagando registro
+``delete 'cliente', 'r1', 'cf1:c4'``
 
-#### Deletando registro
-
-``#Deletando um registro
-delete 'cliente', 'r1', 'cf1:c4'``
-
-
-#Apagando a tabela cliente
+#### Apagando a tabela cliente
 ``disable 'cliente'
 drop 'cliente'``
 
-
-create 'fornecedor', 'cf2'
-
-put 'fornecedor', 'r1', 'cf1:c1', 'empresa A'
-put 'fornecedor', 'r2', 'cf1:c2', '8888'
-put 'fornecedor', 'r3', 'cf2:c3', 'http://www.fornecedor.com.br'
-put 'fornecedor', 'r4', 'cf2:c4', '10'
-
+## Link para mais comandos do HBase
+``https://learnhbase.net/2013/03/02/hbase-shell-commands/``
