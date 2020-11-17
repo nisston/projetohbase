@@ -1,33 +1,32 @@
 # Intalação, Configuração e Execução do Apache HBase
 Projeto desenvolvido na disciplina de Banco de Dados.
-
+Prof. Dr. Carlos Eduardo Santos Pires
 -----
 
 ## Apache HBase via Google Cloud
 
 #### Acessando o ambiente da Google Cloud
 -----
-``https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br``
+https://cloud.google.com/bigtable/docs/quickstart-hbase?hl=pt-br
 
 #### Link para acesso ao console do cloud do google
 -----
-``https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br``
------
+https://console.cloud.google.com/projectselector2/home/dashboard?hl=pt-br
+
+
 
 ##Comandos de configuração
 -----
 
 #### Instalação do JDK para rodar o HBase
+``#Comandos de configuração do JDK para rodar o HBase``
+``sudo apt-get update``
+``sudo apt-get install openjdk-8-jdk-headless``
+``export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')``
 
-``#Comandos de configuração do JDK para rodar o HBase
-sudo apt-get update
-sudo apt-get install openjdk-8-jdk-headless
-export JAVA_HOME=$(update-alternatives --list java | tail -1 | sed -E 's/\/bin\/java//')``
-
-``#Clonando um repositório exemplo de bigtable
-git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git
-cd cloud-bigtable-examples/quickstart``
-
+``#Comandos para clonar um repositório exemplo de bigtable``
+``git clone https://github.com/GoogleCloudPlatform/cloud-bigtable-examples.git``
+``cd cloud-bigtable-examples/quickstart``
 
 #### Iniciando o HBase
 ``./quickstart.sh``
@@ -39,16 +38,16 @@ cd cloud-bigtable-examples/quickstart``
 ``list``
 
 #### Criando registros na tabela cliente com quatro colunas
-``put 'cliente', 'r1', 'cf1:c1', 'maria'
-put 'cliente', 'r1', 'cf1:c2', '222'
-put 'cliente', 'r1', 'cf1:c3', 'http://www.empresa.com.br'
-put 'cliente', 'r1', 'cf1:c4', '1000'``
+``put 'cliente', 'r1', 'cf1:c1', 'maria'``
+``put 'cliente', 'r1', 'cf1:c2', '222'``
+``put 'cliente', 'r1', 'cf1:c3', 'http://www.empresa.com.br'``
+``put 'cliente', 'r1', 'cf1:c4', '1000'``
 
 #### Criando um novo registro na tabela cliente com quatro coluna 
-``put 'cliente', 'r2', 'cf1:c1', 'pedro'
-put 'cliente', 'r2', 'cf1:c2', '44444'
-put 'cliente', 'r2', 'cf1:c3', 'http://www.empresaA.com.br'
-put 'cliente', 'r2', 'cf1:c4', '200'``
+``put 'cliente', 'r2', 'cf1:c1', 'pedro'``
+``put 'cliente', 'r2', 'cf1:c2', '44444'``
+``put 'cliente', 'r2', 'cf1:c3', 'http://www.empresaA.com.br'``
+``put 'cliente', 'r2', 'cf1:c4', '200'``
 
 #### Visualizando dados da tabela cliente
 ``scan 'cliente'``
@@ -66,8 +65,8 @@ put 'cliente', 'r2', 'cf1:c4', '200'``
 ``delete 'cliente', 'r1', 'cf1:c4'``
 
 #### Apagando a tabela cliente
-``disable 'cliente'
-drop 'cliente'``
+``disable 'cliente'``
+``drop 'cliente'``
 
 ## Link para mais comandos do HBase
-``https://learnhbase.net/2013/03/02/hbase-shell-commands/``
+https://learnhbase.net/2013/03/02/hbase-shell-commands/
